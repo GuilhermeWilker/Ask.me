@@ -1,0 +1,47 @@
+<%- include ("partials/header.ejs") %>
+<body>
+  <%- include ("partials/navbar.ejs") %>
+
+  <div class="container">
+    <div class="box-pergunta">
+      <img
+        src="https://media.tenor.com/ZRQtbfMjbLYAAAAC/skeleton-typing.gif"
+        class="gif"
+      />
+
+      <div>
+        <h1 class="titulo-pergunta"><%= pergunta.title%></h1>
+        <p class="desc-pergunta"><%= pergunta.description%></p>
+      </div>
+    </div>
+
+    <h4 class="tag">Principais respostas</h4>
+
+    <aside>
+      <form method="post" action="/responder" class="form">
+        <textarea
+          maxlength="200"
+          placeholder="digite sua resposta"
+          name="corpo"
+          class="txt-responder"
+          required
+        ></textarea>
+
+        <input type="hidden" name="pergunta" value="<%=pergunta.id%>" />
+
+        <button type="submit" class="btn-res">Responder</button>
+      </form>
+
+      <div class="cards-container">
+        <% respostas.forEach(resposta => { %>
+        <div class="card mt-5">
+          <div class="card-body">
+            <p><%= resposta.corpo %></p>
+          </div>
+        </div>
+        <% })%>
+      </div>
+    </aside>
+  </div>
+</body>
+<%- include ("partials/footer.ejs") %>

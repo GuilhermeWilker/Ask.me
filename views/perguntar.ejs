@@ -1,0 +1,47 @@
+<%- include ("partials/header.ejs") %>
+<body>
+  <%- include ("partials/navbar.ejs") %>
+
+  <div class="container mt-5">
+    <div class="perguntar-page">
+      <div class="hero-perguntar">
+        <h3>
+          Aí sim hein!!<br />
+          Digite a sua pergunta ao lado
+        </h3>
+
+        <img src="https://media.tenor.com/2ER74Ee4Ou0AAAAC/hmmnotbad-hmm.gif" />
+
+        <p>
+          <mark>
+            Lembre-se é sempre legal manter o respeito mútuo durante as
+            interações..</mark
+          >
+        </p>
+      </div>
+
+      <form method="POST" action="/salvarpergunta">
+        <input
+          name="titulo"
+          type="text"
+          placeholder="Digite o seu título"
+          class="txt-input"
+          required
+        />
+        <br />
+        <br />
+
+        <textarea
+          maxlength="200"
+          name="descricao"
+          placeholder="Descreva sua pergunta aqui"
+          class="txt-responder"
+          required
+        ></textarea>
+        <br />
+        <button type="submit" class="btn-res">Perguntar</button>
+      </form>
+    </div>
+  </div>
+</body>
+<%- include ("partials/footer.ejs") %>

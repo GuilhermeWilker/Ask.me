@@ -1,0 +1,39 @@
+<%- include ("partials/header.ejs") %>
+<body>
+  <%- include ("partials/navbar.ejs") %>
+
+  <div class="container">
+    <div class="hero">
+      <div class="hero-text">
+        <h1>O melhor forúm de perguntas que você ja viu!</h1>
+        <p>
+          Welcome to our free Slack community for event professionals. This
+          community is designed to help event professionals connect, share
+          advice, and ask questions.
+        </p>
+      </div>
+      <img
+        src="https://media.tenor.com/7x1_TZA-tlEAAAAM/computer.gif"
+        class="gif"
+      />
+    </div>
+
+    <h2 class="feed-header">Feed de perguntas</h2>
+
+    <div class="box-feed-pergunta">
+      <% perguntas.forEach(pergunta => { %>
+      <div class="card-pergunta mt-5">
+        <div class="card-body">
+          <h4><%= pergunta.title %></h4>
+        </div>
+        <div class="card-footer">
+          <a href="/pergunta/<%= pergunta.id%>">
+            <button class="btn-ler">Ler</button>
+          </a>
+        </div>
+      </div>
+      <% })%>
+    </div>
+  </div>
+</body>
+<%- include ("partials/footer.ejs") %>
