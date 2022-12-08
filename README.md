@@ -1,6 +1,6 @@
 # Ask.me🤔
 
-<img width="510px" src="public/img/readme-hero.png" alt="Imagem de demonstração da aplicação">
+<img width="700px" src="public/img/readme-hero.png" alt="Imagem de demonstração da aplicação">
 
 > Comunidade de perguntas e respostas, criando interações aos usuários de forma anônima e de temas livres (dado o supervisionamento da administração).
 
